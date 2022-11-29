@@ -1,5 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { useState } from "react";
 
-<h2>This is my first commit</h2>
+export default function Home() {
+  const [reactiveVariable, setReactiveVarible] = useState(0);
+
+  function handleClick() {
+    setReactiveVarible(reactiveVariable+1);
+  }
+
+  return (
+    <div>
+      <button onClick={handleClick}>CLICK ME</button>
+      <p>CLICKED {reactiveVariable} TIMES</p>
+    </div>
+  )
+}
