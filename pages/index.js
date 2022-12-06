@@ -7,9 +7,14 @@ export default function Home() {
     setReactiveVarible(reactiveVariable+1);
   }
 
+  function resetClick() {
+    setReactiveVarible(0)
+  }
+
   return (
     <div>
       <button onClick={handleClick}>CLICK ME</button>
+      <button onClick={resetClick}>resetClick</button>
       <p>CLICKED {reactiveVariable} TIMES</p>
     </div>
   )
